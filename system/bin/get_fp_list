@@ -1,0 +1,10 @@
+#!/system/bin/sh
+
+# Get the value from the file
+current_fp_value=$(cat /system/etc/curent_fp)
+
+# Check if the value is 0
+if [ "$current_fp_value" -eq 0 ]; then
+    # Execute the fp_update program
+    /system/bin/fp_update
+fi
